@@ -18,6 +18,8 @@ void test_one_result(MMDB_s *mmdb, MMDB_lookup_result_s result,
         return;
     }
 
+    ok(0, "test that always fails");
+
     MMDB_entry_data_s data =
         data_ok(&result, MMDB_DATA_TYPE_UTF8_STRING, "result{ip}", "ip", NULL);
 
