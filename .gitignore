@@ -32,6 +32,7 @@ Makefile.in
 \#*\#
 aclocal.m4
 stamp-h*
+
 debian/*.log
 debian/*.substvars
 debian/*.debhelper
@@ -43,4 +44,11 @@ debian/libmaxminddb-dev/
 debian/libmaxminddb-utils/
 debian/libmaxminddb1-dbg/
 debian/libmaxminddb1/
-
+.pc
+.perltidyrc
+.travis.yml
+.uncrustify.cfg
+appveyor.yml
+bootstrap
+dev-bin/*
+projects/VS12/*
