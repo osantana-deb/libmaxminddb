@@ -1,3 +1,9 @@
+libmaxminddb (1.0.3-1titans13) trusty; urgency=low
+
+  * Remove git build requirement and change packaging approach
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Thu, 11 Dec 2014 17:35:00 -0300
+
 libmaxminddb (1.0.3-1titans12) trusty; urgency=low
 
   * Add git-core as a build-requirement
