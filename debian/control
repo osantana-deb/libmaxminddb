@@ -1,0 +1,98 @@
+Source: libmaxminddb
+Priority: extra
+Maintainer: Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>
+Build-Depends: debhelper (>= 9.0.0), dh-autoreconf, build-essential
+Standards-Version: 3.9.5
+Section: libs
+Homepage: https://github.com/maxmind/libmaxminddb
+
+Package: libmaxminddb1
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends},
+ ${shlib:Depends},
+ ${misc:Depends}
+Description: A C library for reading MaxMind DB files.
+ The libmaxminddb library provides a C library for
+ reading MaxMind DB files, including the GeoIP2
+ databases from MaxMind. This is a custom binary
+ format designed to facilitate fast lookups of IP
+ addresses while allowing for great flexibility in the
+ type of data associated with an address.
+ .
+ The MaxMind DB format is an open format. The spec is
+ available at http://maxmind.github.io/MaxMind-DB/.
+ This spec is licensed under the Creative Commons
+ Attribution-ShareAlike 3.0 Unported License.
+ .
+ See http://dev.maxmind.com/ for more details about
+ MaxMind's GeoIP2 products.
+
+Package: libmaxminddb1-dbg
+Section: debug
+Architecture: any
+Multi-Arch: same
+Priority: extra
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libmaxminddb1 (= ${binary:Version})
+Description: A C library for reading MaxMind DB files. (debug package)
+ The libmaxminddb library provides a C library for
+ reading MaxMind DB files, including the GeoIP2
+ databases from MaxMind. This is a custom binary
+ format designed to facilitate fast lookups of IP
+ addresses while allowing for great flexibility in the
+ type of data associated with an address.
+ .
+ The MaxMind DB format is an open format. The spec is
+ available at http://maxmind.github.io/MaxMind-DB/.
+ This spec is licensed under the Creative Commons
+ Attribution-ShareAlike 3.0 Unported License.
+ .
+ See http://dev.maxmind.com/ for more details about
+ MaxMind's GeoIP2 products.
+
+
+Package: libmaxminddb-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libmaxminddb1 (= ${binary:Version})
+Description: A C library for reading MaxMind DB files.
+ The libmaxminddb library provides a C library for
+ reading MaxMind DB files, including the GeoIP2
+ databases from MaxMind. This is a custom binary
+ format designed to facilitate fast lookups of IP
+ addresses while allowing for great flexibility in the
+ type of data associated with an address.
+ .
+ The MaxMind DB format is an open format. The spec is
+ available at http://maxmind.github.io/MaxMind-DB/.
+ This spec is licensed under the Creative Commons
+ Attribution-ShareAlike 3.0 Unported License.
+ .
+ See http://dev.maxmind.com/ for more details about
+ MaxMind's GeoIP2 products.
+ .
+ This package contains development files.
+
+Package: maxminddb
+Section: utils
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libmaxminddb1 (= ${binary:Version})
+Description: An utility to make Maxmind GeoIP2 database
+ lookups.
+ .
+ The MaxMind DB format is an open format. The spec is
+ available at http://maxmind.github.io/MaxMind-DB/.
+ This spec is licensed under the Creative Commons
+ Attribution-ShareAlike 3.0 Unported License.
+ .
+ See http://dev.maxmind.com/ for more details about
+ MaxMind's GeoIP2 products.
+

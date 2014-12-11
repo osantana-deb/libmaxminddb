@@ -1,0 +1,29 @@
+libmaxminddb (1.0.3-1titans8) trusty; urgency=low
+
+  * Remove static library from dev package due to multi-arch conflicts
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Wed, 10 Dec 2014 15:41:00 -0300
+
+libmaxminddb (1.0.3-1titans7) trusty; urgency=low
+
+  * Fix multi-arch package generation
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Wed, 10 Dec 2014 15:03:00 -0300
+
+libmaxminddb (1.0.3-1titans4) trusty; urgency=low
+
+  * Fix release version
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Wed, 10 Dec 2014 14:36:00 -0300
+
+libmaxminddb (1.0.3-1titans3.1) trusty; urgency=low
+
+  * Update to upstream version 1.0.3
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Tue, 09 Dec 2014 11:33:00 -0300
+
+libmaxminddb (0.5.6-1chl1~precise1) precise; urgency=low
+
+  * Initial package for precise.
+
+ -- Chris Lea <chl@chrislea.com>  Mon, 04 Aug 2014 16:25:34 -0700
