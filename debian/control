@@ -6,7 +6,7 @@ Standards-Version: 3.9.5
 Section: libs
 Homepage: https://github.com/maxmind/libmaxminddb
 
-Package: libmaxminddb1
+Package: libmaxminddb0
 Section: libs
 Architecture: any
 Multi-Arch: same
@@ -30,7 +30,7 @@ Description: A C library for reading MaxMind DB files.
  See http://dev.maxmind.com/ for more details about
  MaxMind's GeoIP2 products.
 
-Package: libmaxminddb1-dbg
+Package: libmaxminddb0-dbg
 Section: debug
 Architecture: any
 Multi-Arch: same
@@ -38,7 +38,7 @@ Priority: extra
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- libmaxminddb1 (= ${binary:Version})
+ libmaxminddb0 (= ${binary:Version})
 Description: A C library for reading MaxMind DB files. (debug package)
  The libmaxminddb library provides a C library for
  reading MaxMind DB files, including the GeoIP2
@@ -60,7 +60,7 @@ Package: libmaxminddb-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: foreign
-Depends: libmaxminddb1 (= ${binary:Version})
+Depends: libmaxminddb0 (= ${binary:Version})
 Description: A C library for reading MaxMind DB files.
  The libmaxminddb library provides a C library for
  reading MaxMind DB files, including the GeoIP2
@@ -84,7 +84,7 @@ Section: utils
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: libmaxminddb1 (= ${binary:Version})
+Depends: libmaxminddb0 (= ${binary:Version})
 Description: An utility to make Maxmind GeoIP2 database
  lookups.
  .

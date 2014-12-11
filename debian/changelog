@@ -2,7 +2,7 @@ libmaxminddb (1.0.3-1titans12) trusty; urgency=low
 
   * Add git-core as a build-requirement
 
- -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Wed, 11 Dec 2014 14:21:00 -0300
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Thu, 11 Dec 2014 14:21:00 -0300
 
 libmaxminddb (1.0.3-1titans11) trusty; urgency=low
 

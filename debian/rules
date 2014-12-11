@@ -16,10 +16,25 @@ endif
 %:
 	dh $@ --with=autoreconf
 
+override_dh_auto_build:
+	dh_testdir
+	git submodule init
+	git submodule update
+	dh_auto_build
+
 override_dh_clean:
 	dh_testdir
 	git submodule deinit .
+	rm -rf man/
+	rm -rf t/.libs
 	dh_clean
+
+override_dh_strip:
+	dh_strip --dbg-package=libmaxminddb0-dbg
+
+override_dh_install:
+	# Remove .la files.
+	rm -rf $(CURDIR)/debian/tmp/usr/lib/*/*.la
 
 #build: build-stamp
 #build-stamp:
