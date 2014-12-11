@@ -19,6 +19,8 @@ build-stamp:
 	dh_prep
 	dh_testdir
 	autoreconf -vfi
+	git submodule init
+	git submodule update
 	mkdir -p build
 	cd build && \
 	../configure --prefix=/usr --mandir=\$${prefix}/share/man \
@@ -32,6 +34,7 @@ build-stamp:
 clean:
 	dh_testdir
 	rm -f build-stamp
+	rm -f compile test-driver
 	rm -f config.cache config.log config.status
 	rm -f */config.cache */config.log */config.status
 	rm -f conftest* */conftest*
@@ -40,6 +43,7 @@ clean:
 	rm -f aclocal.m4 config.guess config.h.in config.sub configure
 	rm -f depcomp install-sh ltmain.sh missing mkinstalldirs
 	find -name Makefile.in -delete
+	git submodule deinit .
 	dh_clean
 
 install: build
