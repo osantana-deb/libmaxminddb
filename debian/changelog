@@ -1,3 +1,9 @@
+libmaxminddb (1.0.3~20141211.d42328fea-1titans1) trusty; urgency=low
+
+  * Using git-buildpackage and snapshot release
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Thu, 11 Dec 2014 36:52:00 -0300
+
 libmaxminddb (1.0.3-1titans10) trusty; urgency=low
 
   * Prepare split and add more subpackages (maxminddb & libmaxminddb1-dbg)
