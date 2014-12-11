@@ -20,82 +20,22 @@ override_dh_auto_build:
 	dh_testdir
 	git submodule init
 	git submodule update
+	rm -rf man/
 	dh_auto_build
 
 override_dh_clean:
 	dh_testdir
 	git submodule deinit .
 	rm -rf man/
-	rm -rf t/.libs
 	dh_clean
 
 override_dh_strip:
 	dh_strip --dbg-package=libmaxminddb0-dbg
 
 override_dh_install:
-	# Remove .la files.
 	rm -rf $(CURDIR)/debian/tmp/usr/lib/*/*.la
+	dh_install --list-missing
 
-#build: build-stamp
-#build-stamp:
-#	dh_prep
-#	dh_testdir
-#	autoreconf -vfi
-# 	git submodule init
-# 	git submodule update
-# 	mkdir -p build
-# 	cd build && \
-# 	../configure --prefix=/usr --mandir=\$${prefix}/share/man \
-# 	             --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-# 	             --infodir=\$${prefix}/share/info $(confflags) \
-# 		     --disable-silent-rules \
-# 		     $(shell DEB_CFLAGS_MAINT_APPEND=-Wall dpkg-buildflags --export=configure)
-# 	cd build && $(MAKE)
-# 	>$@
-# 
-# clean:
-# 	dh_testdir
-# 	rm -f build-stamp
-# 	rm -f compile test-driver
-# 	rm -f config.cache config.log config.status
-# 	rm -f */config.cache */config.log */config.status
-# 	rm -f conftest* */conftest*
-# 	rm -rf autom4te.cache */autom4te.cache
-# 	rm -rf build
-# 	rm -f aclocal.m4 config.guess config.h.in config.sub configure
-# 	rm -f depcomp install-sh ltmain.sh missing mkinstalldirs
-# 	find -name Makefile.in -delete
-# 	git submodule deinit .
-# 	dh_clean
-# 
-# install: build
-# 	dh_testdir
-# 	dh_testroot
-# 	dh_prep
-# 	dh_installdirs
-# 
-# 	cd build && $(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
-# 
-# # Build architecture-dependent files here.
-# binary-arch: build install
-# 	dh_testdir
-# 	dh_testroot
-# 
-# 	dh_installdocs
-# 	dh_install --fail-missing
-# 	dh_installchangelogs
-# 	dh_link
-# 	dh_strip --dbg-package=libmaxminddb1-dbg
-# 	dh_compress
-# 	dh_fixperms
-# 	dh_makeshlibs
-# 	dh_shlibdeps
-# 	dh_installdeb
-# 	dh_gencontrol
-# 	dh_md5sums
-# 	dh_builddeb
-# 
-# binary-indep: build install
-# binary: binary-indep binary-arch
-# 
-# .PHONY: build clean binary-indep binary-arch binary install
+override_dh_makeshlibs:
+	dh_makeshlibs -- -c1
+

@@ -42,13 +42,12 @@ build/
 build-stamp
 debian/libmaxminddb-dev/
 debian/libmaxminddb-utils/
-debian/libmaxminddb1-dbg/
-debian/libmaxminddb1/
+debian/libmaxminddb0-dbg/
+debian/libmaxminddb0/
 .pc
 .perltidyrc
 .travis.yml
 .uncrustify.cfg
 appveyor.yml
 bootstrap
-dev-bin/*
 projects/VS12/*
