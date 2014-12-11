@@ -36,6 +36,7 @@ stamp-h*
 debian/*.log
 debian/*.substvars
 debian/*.debhelper
+debian/autoreconf.*
 debian/tmp
 debian/files
 build/
