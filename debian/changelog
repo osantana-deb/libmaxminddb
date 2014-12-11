@@ -1,3 +1,9 @@
+libmaxminddb (1.0.3-1titans11) trusty; urgency=low
+
+  * Bump release to resend package to PPA
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Wed, 11 Dec 2014 14:21:00 -0300
+
 libmaxminddb (1.0.3-1titans10) trusty; urgency=low
 
   * Prepare split and add more subpackages (maxminddb & libmaxminddb1-dbg)
