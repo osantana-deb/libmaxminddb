@@ -2,8 +2,6 @@
 *.lo
 *.o
 *.so
-*/.deps
-*/.libs
 *~
 .\#*
 .gh-pages

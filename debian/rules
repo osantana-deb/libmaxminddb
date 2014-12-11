@@ -19,6 +19,8 @@ endif
 override_dh_clean:
 	dh_testdir
 	(cd t/libtap && make clean)
+	find . -name ".libs" -delete
+	find . -name ".deps" -delete
 	dh_clean
 
 override_dh_auto_build:

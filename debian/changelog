@@ -1,3 +1,9 @@
+libmaxminddb (1.0.3-1titans14) trusty; urgency=low
+
+  * Remove hidden directories on dh_clean
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Thu, 11 Dec 2014 17:53:00 -0300
+
 libmaxminddb (1.0.3-1titans13) trusty; urgency=low
 
   * Remove git build requirement and change packaging approach
