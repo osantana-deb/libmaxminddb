@@ -16,26 +16,20 @@ endif
 %:
 	dh $@ --with=autoreconf
 
-override_dh_auto_build:
-	dh_testdir
-	git submodule init
-	git submodule update
-	rm -rf man/
-	dh_auto_build
-
 override_dh_clean:
 	dh_testdir
-	git submodule deinit .
-	rm -rf man/
+	(cd t/libtap && make clean)
 	dh_clean
+
+override_dh_auto_build:
+	dh_testdir
+	(cd t/libtap && make)
+	dh_auto_build
 
 override_dh_strip:
 	dh_strip --dbg-package=libmaxminddb0-dbg
 
 override_dh_install:
 	rm -rf $(CURDIR)/debian/tmp/usr/lib/*/*.la
-	dh_install --list-missing
-
-override_dh_makeshlibs:
-	dh_makeshlibs -- -c1
-
+	rm -rf $(CURDIR)/debian/tmp/usr/share/man
+	dh_install --fail-missing
