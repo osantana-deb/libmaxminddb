@@ -1,4 +1,4 @@
-libmaxminddb (1.0.3-1titans15) trusty; urgency=low
+libmaxminddb (1.0.3-1titans16) trusty; urgency=low
 
   * Fix a brown paper bug on .libs/.deps directory removal
 
