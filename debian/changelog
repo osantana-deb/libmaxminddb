@@ -1,8 +1,14 @@
-libmaxminddb (1.0.3-1titans16) trusty; urgency=low
+libmaxminddb (1.0.3-2ppa1~precise1) precise; urgency=low
 
-  * Fix a brown paper bug on .libs/.deps directory removal
+  * Add ppa1 suffix and precise serie information
 
- -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Thu, 11 Dec 2014 17:58:00 -0300
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Mon, 6 Jan 2015 16:40:00 -0200
+
+libmaxminddb (1.0.3-2) trusty; urgency=low
+
+  * Fix package versioning
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Mon, 15 Dec 2014 14:17:00 -0300
 
 libmaxminddb (1.0.3-1titans14) trusty; urgency=low
 
