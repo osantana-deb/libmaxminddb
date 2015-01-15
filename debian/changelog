@@ -1,3 +1,15 @@
+libmaxminddb (1.0.3-2ppa1~trusty2) trusty; urgency=low
+
+  * Fix debian/changelog file
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Mon, 15 Jan 2015 11:41:00 -0200
+
+libmaxminddb (1.0.3-2ppa1~trusty1) trusty; urgency=low
+
+  * Rebuild for trusty serie
+
+ -- Osvaldo Santana Neto <osvaldo.neto@titansgroup.com.br>  Mon, 15 Jan 2015 11:28:00 -0200
+
 libmaxminddb (1.0.3-2ppa1~precise1) precise; urgency=low
 
   * Add ppa1 suffix and precise serie information
